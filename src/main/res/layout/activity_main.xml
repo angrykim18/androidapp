@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1C1E"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/top_info_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/user_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홍길동님"
+            android:textColor="@android:color/white"
+            android:textSize="32sp" /> <TextView
+        android:id="@+id/expire_date_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="종료일: 2025-12-31"
+        android:textColor="@android:color/white"
+        android:textSize="32sp" /> <TextView
+        android:id="@+id/connection_status_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="인터넷 연결됨"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="32sp" /> </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_menu_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_info_bar" />
+
+    <LinearLayout
+        android:id="@+id/ad_banner_container"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:background="#444444"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"> <ImageView
+        android:id="@+id/ad_image_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:background="#666666"
+        android:contentDescription="광고 1" />
+        <ImageView
+            android:id="@+id/ad_image_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="#666666"
+            android:contentDescription="광고 2" />
+        <ImageView
+            android:id="@+id/ad_image_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="#666666"
+            android:contentDescription="광고 3" />
+        <ImageView
+            android:id="@+id/ad_image_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#666666"
+            android:contentDescription="광고 4" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="#2C2C2E"
+        app:layout_constraintBottom_toTopOf="@id/ad_banner_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_menu_recyclerview">
+
+        <TextView
+            android:id="@+id/notice_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="[공지사항]\n\n- 새로운 VOD가 업데이트되었습니다.\n- 시스템 정기 점검 안내 (매주 월요일 02:00 ~ 04:00)\n\n- 추가 공지사항 테스트입니다.\n- 글이 길어질 경우 어떻게 보이는지 확인하기 위한 텍스트입니다. \n- 이 영역은 이제 내용이 길어지면 자동으로 스크롤됩니다."
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
